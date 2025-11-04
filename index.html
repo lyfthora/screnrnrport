@@ -23,48 +23,38 @@
               <div class="outer-paragraph-container">
                 <div class="inner-paragraph-container">
                   <div class="translatable">
-                    <p>Hi, I'm <span class="text-blue">Brian Rivero</span></p>
-                    <p>A Front-end developer.</p>
+                    <p>Hi, I'm <span class="text-blue">Abraham</span></p>
+                    <p>
+                      A 3D artist specialized in games and interactive worlds.
+                    </p>
                   </div>
 
                   <div class="translatable">
                     <p>
-                      Another great passion of mine is back-end development,
-                      where I like to learn about designing and optimizing
-                      server-side logic that supports those front-end features.
+                      I’m passionate about designing immersive worlds and
+                      characters that enhance gameplay and storytelling. Through
+                      3D modeling, texturing, and animation, I bring ideas to
+                      life with attention to detail and emotion.
                     </p>
                     <p>
-                      I'm a passionate developer, always looking for new
-                      challenges and opportunities to learn.
+                      My focus is on blending creativity and technique to create
+                      engaging visual experiences that connect players with the
+                      worlds they explore.
                     </p>
                   </div>
                   <div class="translatable">
                     <p>
                       Nowadays, you can find me on
-                      <a
-                        href="https://www.linkedin.com/in/marcos-brian-rivero-4331702a5/"
-                        target="_blank"
-                        class="text-orange"
-                        >LinkedIn</a
+                      <a href="" target="_blank" class="text-orange">LinkedIn</a
                       >.
                     </p>
                     <p>
                       You can always check out my work on
-                      <a
-                        href="https://github.com/lyfthora"
-                        target="_blank"
-                        class="text-pink"
-                        >GitHub</a
-                      >.
+                      <a href="" target="_blank" class="text-pink">GitHub</a>.
                     </p>
                     <p>
                       You can find my resumé over here =>
-                      <a
-                        href="marcosriverocv.pdf"
-                        target="_blank"
-                        class="text-blue"
-                        >CV</a
-                      >
+                      <a href="" target="_blank" class="text-blue">CV</a>
                     </p>
                   </div>
                   <div class="translatable text-center">
@@ -72,6 +62,7 @@
                     <div class="model-row">
                       <div class="modelsglb">
                         <model-viewer
+                          id="model-viewer-1"
                           src="./client/public/models/katana.glb"
                           alt="Katana 3D model"
                           camera-orbit="0deg 75deg 2m"
@@ -79,8 +70,18 @@
                           auto-rotate
                         ></model-viewer>
                       </div>
+                      <div class="model-nav">
+                        <button id="prev-model" class="model-nav-button">
+                          &lt;
+                        </button>
+                        <span id="model-set-number">1</span>
+                        <button id="next-model" class="model-nav-button">
+                          &gt;
+                        </button>
+                      </div>
                       <div class="modelsglb">
                         <model-viewer
+                          id="model-viewer-2"
                           src="./client/public/models/katananotexturing.glb"
                           alt="Katana no texturing 3D model"
                           camera-orbit="0deg 75deg 2m"
@@ -106,23 +107,9 @@
         </div>
 
         <div class="footer-item">
-          <a class="text-blue" href="marcosriverocv.pdf" target="_blank">
-            CV
-          </a>
-          <a
-            class="text-blue"
-            href="https://github.com/lyfthora"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          <a
-            class="text-pink"
-            href="https://www.linkedin.com/in/marcos-brian-rivero-4331702a5/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
+          <a class="text-blue" href="" target="_blank"> CV </a>
+          <a class="text-blue" href="" target="_blank"> GitHub </a>
+          <a class="text-pink" href="" target="_blank"> LinkedIn </a>
         </div>
       </footer>
     </div>

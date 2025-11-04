@@ -470,3 +470,41 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-around;
 }
+.model-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #c9d1d9;
+}
+
+.model-nav-button {
+  all: unset;
+  border: 1px solid #c9d1d9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.model-nav-button:hover:not(:disabled) {
+  background-color: #1e4273;
+  border-color: #58a6ff;
+}
+
+.model-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#model-set-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #58a6ff;
+}
