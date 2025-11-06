@@ -103,8 +103,8 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   border: 1px solid;
 }
 .chatbot-pic {
@@ -460,7 +460,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 }
 
 .modelsglb {
-  width: 44%;
+  width: 894%;
   height: 400px;
   border: 1px solid;
   display: inline-block;
@@ -469,6 +469,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 .model-row {
   display: flex;
   justify-content: space-around;
+  padding: 0 8%;
 }
 .model-nav {
   display: flex;
@@ -507,4 +508,11 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   font-size: 1.5rem;
   font-weight: 700;
   color: #58a6ff;
+}
+
+.model-viewer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6%;
 }

@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
       right: "./client/public/models/katananotexturing.glb",
     },
     {
-      left: "./client/public/models/katananotexturing.glb",
-      right: "./client/public/models/katana.glb",
+      left: "./client/public/models/Gunlance_Textura.glb",
+      right: "./client/public/models/Gunlance_NoTextura.glb",
     },
     {
-      left: "./client/public/models/gravehound.glb",
-      right: "./client/public/models/mejiro.glb",
+      left: "./client/public/models/Gsword_Textura.glb",
+      right: "./client/public/models/Gsword_NoTextura.glb",
     },
   ];
 
