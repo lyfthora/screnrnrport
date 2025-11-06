@@ -9,16 +9,30 @@
       type="text/css"
       href="./client/public/css/styles.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./client/public/css/video-modal.css"
+    />
     <title>Abraham</title>
   </head>
   <body class="darkmode">
+    <div id="video-overlay"></div>
+    <div class="neofetch-gifs">
+      <video class="lainweb" controls muted>
+        <source
+          src="client/public/vids/spotifyytui.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
     <div id="main-container">
       <div id="section-container">
         <div id="right-section">
           <div class="container h-fill" id="main-content">
             <div class="container-content">
               <div>
-                <img src="./client/public/images/a.png" alt="Logo" />
+                <img id="logo" src="./client/public/images/a.png" alt="Logo" />
               </div>
               <div class="outer-paragraph-container">
                 <div class="inner-paragraph-container">
@@ -31,27 +45,21 @@
 
                   <div class="translatable">
                     <p>
-                      I’m passionate about designing immersive worlds and
-                      characters that enhance gameplay and storytelling. Through
-                      3D modeling, texturing, and animation, I bring ideas to
+                      I’m passionate about <span class="text-blue">designing immersive worlds</span> and
+                      characters that enhance <span class="text-pink">gameplay and storytelling</span>. Through
+                      <span class="text-orange">3D modeling, texturing, and animation</span>, I bring ideas to
                       life with attention to detail and emotion.
                     </p>
                     <p>
-                      My focus is on blending creativity and technique to create
-                      engaging visual experiences that connect players with the
+                      My focus is on blending <span class="text-blue">creativity and technique</span> to create
+                      engaging <span class="text-pink">visual experiences</span> that connect players with the
                       worlds they explore.
                     </p>
+                    <p id="showreel-trigger">showreel</p>
                   </div>
 
-                  <div class="neofetch-gifs">
-                    <video class="lainweb" controls muted>
-                      <source
-                        src="client/public/vids/spotifyytui.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                  <p>
+
+                  <!--  <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Saepe earum facere necessitatibus quas, asperiores alias
                     repudiandae? Laborum rerum, harum quis possimus facilis,
@@ -61,7 +69,7 @@
                     asperiores alias repudiandae? Laborum rerum, harum quis
                     possimus facilis, voluptatem temporibus dolore illo aliquid
                     architecto distinctio dicta!.
-                  </p>
+                  </p> -->
                   <div class="translatable text-center">
                     <div class="model-row">
                       <div class="model-viewer-wrapper">
@@ -148,5 +156,6 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
     <script src="./src/js/archlinux.js"></script>
+    <script src="./src/js/video-modal.js"></script>
   </body>
 </html>
