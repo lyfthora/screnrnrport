@@ -426,66 +426,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 .project-button:last-child {
   margin-right: 0; /* ajusta el valor si quieres más o menos separación */
 }
-/* responsive */
-@media screen and (max-width: 1300px) {
-  .neofetch {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #left-section,
-  #right-section {
-    width: 100%;
-  }
-
-  /* #section-container {
-    flex-direction: column;
-  } */
-
-  h1 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 0.9rem;
-  }
-
-  .project-button {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .neofetch,
-  #home.container.selected-frame,
-  #experience.container,
-  #projects.container,
-  #skills.container,
-  #footer-help.footer-item {
-    display: none;
-  }
-  .infoTranslate {
-    display: none;
-  }
-  #main-content.container.h-fill {
-    margin-left: -80px;
-  }
-
-  #footer.container.text-blue {
-    display: grid;
-    justify-content: center;
-  }
-  #main-container {
-    height: 90%;
-  }
-}
 
 .lainweb model-viewer {
   width: 100%;
@@ -578,4 +518,65 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 
 #showreel-trigger:hover {
   background-color: #1e4273;
+}
+
+/* responsive */
+@media screen and (max-width: 1300px) {
+  .neofetch {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #left-section,
+  #right-section {
+    width: 100%;
+  }
+
+  /* #section-container {
+    flex-direction: column;
+  } */
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .project-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .neofetch,
+  #home.container.selected-frame,
+  #experience.container,
+  #projects.container,
+  #skills.container,
+  #footer-help.footer-item {
+    display: none;
+  }
+  .infoTranslate {
+    display: none;
+  }
+  #main-content.container.h-fill {
+    margin-left: -80px;
+  }
+
+  #footer.container.text-blue {
+    display: grid;
+    justify-content: center;
+  }
+  #main-container {
+    height: 90%;
+  }
 }
