@@ -18,6 +18,7 @@
   padding: 0;
   margin: 0;
   cursor: default;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -78,7 +79,7 @@ svg {
 }
 
 #logo {
-  width: 65%;
+  width: 80%;
   display: block;
   margin: -2rem auto 1rem auto;
 }
@@ -89,13 +90,13 @@ svg {
   max-width: 100%;
   color: white;
 
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .neofetch-gifs {
   position: relative;
-  width: 65.7%;
+  width: 100%;
   height: 0;
   padding-bottom: 37%;
   margin: 0 auto;
@@ -125,9 +126,9 @@ svg {
   width: 100%;
   height: 100%;
   line-height: 1;
-  left: calc(-3vw);
+  left: 0;
   font-size: calc(0.7vw);
-  bottom: calc(-3vh);
+  bottom: 0;
 }
 
 #main-container {
@@ -173,8 +174,8 @@ svg {
   gap: 1.5rem;
   padding: 2rem;
   align-items: center;
-  width: calc(100% - 4rem);
-  height: 95vh;
+
+  height: 100%;
 }
 
 #footer {
@@ -209,7 +210,7 @@ svg {
   border: 0.1px solid #c9d1d9;
   position: relative;
   padding-top: 0.2rem;
-  height: 33%;
+  height: 100%;
 }
 .infoTranslate {
   padding-left: 12rem;
@@ -273,7 +274,7 @@ pre {
   border: 0.1px solid #79c0ff;
   color: #c9d1d9;
   overflow-x: scroll;
-  margin: 18px 150px -50px 150px;
+  margin: 0;
 }
 code.html {
   position: static;
@@ -400,7 +401,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   border: 0.1px solid #c9d1d9;
   color: #c9d1d9;
   cursor: pointer;
-  min-width: 150px;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -411,6 +411,55 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 
 .project-button:active {
   opacity: 0.5;
+}
+
+.tools {
+  display: flex;
+  gap: 1rem;
+}
+/* primer grupo (blender y maya) a la izquierda */
+.project-button:nth-child(2) {
+  margin-right: auto;
+}
+
+/* último blender más hacia la izquierda */
+.project-button:last-child {
+  margin-right: 0; /* ajusta el valor si quieres más o menos separación */
+}
+/* responsive */
+@media screen and (max-width: 1300px) {
+  .neofetch {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #left-section,
+  #right-section {
+    width: 100%;
+  }
+
+  /* #section-container {
+    flex-direction: column;
+  } */
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .project-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -437,15 +486,10 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     height: 90%;
   }
 }
-@media screen and (max-width: 1300px) {
-  .neofetch {
-    display: none;
-  }
-}
 
 .lainweb model-viewer {
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 
 .modelsglb model-viewer {
@@ -462,8 +506,8 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 }
 
 .modelsglb {
-  width: 894%;
-  height: 400px;
+  width: 100%;
+  height: 316px;
   border: 1px solid;
   display: inline-block;
 }
@@ -471,7 +515,8 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 .model-row {
   display: flex;
   justify-content: space-around;
-  padding: 0 8%;
+  gap: 5rem;
+  padding: 0;
 }
 .model-nav {
   display: flex;
@@ -516,11 +561,12 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 6%;
+  width: 100%;
 }
 
 #showreel-trigger {
   all: unset;
+  margin-top: 5px;
   padding: 0.5rem 1rem;
   border: 0.1px solid #c9d1d9;
   color: #c9d1d9;
@@ -528,7 +574,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   min-width: 150px;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 1rem;
 }
 
 #showreel-trigger:hover {
