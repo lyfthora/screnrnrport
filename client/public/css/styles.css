@@ -417,14 +417,13 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   display: flex;
   gap: 1rem;
 }
-/* primer grupo (blender y maya) a la izquierda */
+
 .project-button:nth-child(2) {
   margin-right: auto;
 }
 
-/* último blender más hacia la izquierda */
 .project-button:last-child {
-  margin-right: 0; /* ajusta el valor si quieres más o menos separación */
+  margin-right: 0;
 }
 
 .lainweb model-viewer {
@@ -579,4 +578,71 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   #main-container {
     height: 90%;
   }
+}
+
+.skills-container {
+  display: flex;
+  border: 1px solid #c9d1d9;
+  padding: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.skills-category {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skills-category h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.skill-button {
+  all: unset;
+  padding: 0.8rem;
+  border: 1px solid;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-category:first-child .skill-button {
+  border-color: #ec8e2c;
+  color: #ec8e2c;
+}
+
+/* .skills-category:first-child .skill-button:hover {
+  background-color: #ec8e2c;
+  color: #0d1117;
+  box-shadow: 0 0 10px #ec8e2c;
+} */
+
+.skills-category:last-child .skill-button {
+  border-color: #bc8cff;
+  color: #bc8cff;
+}
+
+/* .skills-category:last-child .skill-button:hover {
+  background-color: #bc8cff;
+  color: #0d1117;
+  box-shadow: 0 0 10px #bc8cff;
+} */
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 1rem;
 }
