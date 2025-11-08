@@ -73,4 +73,59 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modelViewer1 && modelViewer2 && setNumberSpan) {
     updateModels();
   }
+
+  const videoPlayer1 = document.getElementById("video-player-1");
+  const videoPlayer2 = document.getElementById("video-player-2");
+  const prevButtonAnim = document.getElementById("prev-model-anim");
+  const nextButtonAnim = document.getElementById("next-model-anim");
+  const setNumberSpanAnim = document.getElementById("model-set-number-anim");
+
+  const videoSets = [
+    {
+      left: "./client/public/vids/Video-Patada.mp4",
+      right: "./client/public/vids/Video-Death.mp4",
+    },
+  ];
+
+  let currentVideoSetIndex = 0;
+
+  function updateVideos() {
+    const currentSet = videoSets[currentVideoSetIndex];
+    if (videoPlayer1) {
+      videoPlayer1.src = currentSet.left;
+    }
+    if (videoPlayer2) {
+      videoPlayer2.src = currentSet.right;
+    }
+    if (setNumberSpanAnim) {
+      setNumberSpanAnim.textContent = currentVideoSetIndex + 1;
+    }
+
+    if (prevButtonAnim) {
+      prevButtonAnim.disabled = currentVideoSetIndex === 0;
+    }
+    if (nextButtonAnim) {
+      nextButtonAnim.disabled = currentVideoSetIndex === videoSets.length - 1;
+    }
+  }
+
+  if (prevButtonAnim && nextButtonAnim) {
+    nextButtonAnim.addEventListener("click", () => {
+      if (currentVideoSetIndex < videoSets.length - 1) {
+        currentVideoSetIndex++;
+        updateVideos();
+      }
+    });
+
+    prevButtonAnim.addEventListener("click", () => {
+      if (currentVideoSetIndex > 0) {
+        currentVideoSetIndex--;
+        updateVideos();
+      }
+    });
+  }
+
+  if (videoPlayer1 && videoPlayer2 && setNumberSpanAnim) {
+    updateVideos();
+  }
 });
