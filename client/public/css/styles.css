@@ -204,7 +204,7 @@ svg {
   gap: 0.5rem;
 }
 
-.container {
+.custom-container {
   display: flex;
   flex-direction: column;
   border: 0.1px solid #c9d1d9;
@@ -568,21 +568,18 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 480px) {
   .neofetch,
-  #home.container.selected-frame,
-  #experience.container,
-  #projects.container,
-  #skills.container,
+    #home.custom-container.selected-frame, #experience.custom-container, #projects.custom-container, #skills.custom-container,
   #footer-help.footer-item {
     display: none;
   }
   .infoTranslate {
     display: none;
   }
-  #main-content.container.h-fill {
+  #main-content.custom-container.h-fill {
     margin-left: -80px;
   }
 
-  #footer.container.text-blue {
+  #footer.custom-container.text-blue {
     display: grid;
     justify-content: center;
   }
