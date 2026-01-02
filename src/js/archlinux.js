@@ -129,3 +129,24 @@ document.addEventListener("DOMContentLoaded", () => {
     updateVideos();
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      const selectedTab = button.dataset.tab;
+      projectCards.forEach((card) => {
+        if (selectedTab === "all") {
+          card.classList.remove("hidden");
+        } else if (card.dataset.category === selectedTab) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  });
+});

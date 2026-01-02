@@ -128,175 +128,180 @@
                   </div>
                 </div>
                 <!-- 3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D -->
-                <div class="translatable text-center">
-                  <h2 class="text-blue skills-title">Projects</h2>
-                  <div class="model-row">
-                    <div class="model-viewer-wrapper">
-                      <h2>Texturing</h2>
-                      <div class="modelsglb">
-                        <model-viewer id="model-viewer-1" src="./client/public/models/katana.glb" alt="Katana 3D model"
+                <section id="works" class="works-section">
+                  <h2 class="text-blue section-title">Trabajos</h2>
+                  <div class="works-tabs">
+                    <button class="tab-button active" data-tab="all">Todos</button>
+                    <button class="tab-button" data-tab="3d-modeling">Modelado 3D</button>
+                    <button class="tab-button" data-tab="animation-3d">Animación 3D</button>
+                    <button class="tab-button" data-tab="animation-2d">Animación 2D</button>
+                    <button class="tab-button" data-tab="games-3d">Juegos 3D</button>
+                    <button class="tab-button" data-tab="games-2d">Juegos 2D</button>
+                    <button class="tab-button" data-tab="video">Vídeo</button>
+                    <button class="tab-button" data-tab="photography">Fotografía</button>
+                    <button class="tab-button" data-tab="3d-print">Impresión 3D</button>
+                  </div>
+
+                  <div class="projects-gallery">
+                    <article class="project-card" data-category="3d-modeling">
+                      <div class="project-media">
+                        <model-viewer src="./client/public/models/katana.glb" alt="Katana 3D model"
                           camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
                       </div>
-                    </div>
-                    <div class="model-nav">
-                      <button id="prev-model" class="model-nav-button">
-                        &lt;
-                      </button>
-                      <span id="model-set-number">1</span>
-                      <button id="next-model" class="model-nav-button">
-                        &gt;
-                      </button>
-                    </div>
-                    <div class="model-viewer-wrapper">
-                      <h2>Modeling</h2>
-                      <div class="modelsglb">
-                        <model-viewer id="model-viewer-2" src="./client/public/models/katananotexturing.glb"
-                          alt="Katana no texturing 3D model" camera-orbit="0deg 75deg 2m" camera-controls
-                          auto-rotate></model-viewer>
+                      <div class="project-info">
+                        <h3 class="project-title">Katana - Prop para RPG</h3>
+                        <p class="project-description">
+                          Modelado y texturizado de una katana japonesa tradicional para uso en videojuegos RPG.
+                        </p>
+                        <div class="project-role">
+                          <span class="label">Mi rol:</span>
+                          <span>Modelado 3D, UV Mapping, Texturizado PBR</span>
+                        </div>
+                        <div class="project-tools">
+                          <span class="tool-tag">Blender</span>
+                          <span class="tool-tag">Substance Painter</span>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="translatable"></div>
-                <div class="tools">
-                  <button class="project-button">blender</button>
-                  <button class="project-button">maya</button>
-                </div>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Saepe earum facere necessitatibus quas, asperiores alias
-                  repudiandae? Laborum rerum, harum quis possimus facilis,
-                  voluptatem temporibus dolore illo aliquid architecto
-                  distinctio dicta!. Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Saepe earum facere necessitatibus quas,
-                  asperiores alias repudiandae? Laborum rerum, harum quis
-                  possimus facilis, voluptatem temporibus dolore illo aliquid
-                  architecto distinctio dicta!.
-                </p>
-                <!-- ANIMATIONANIMATIONANIMATIONANIMATIONANIMATIONANIMATIONANIMATIONANIMATIONANIMATIONANIMATION -->
-                <div class="translatable text-center">
-                  <div class="model-row">
-                    <div class="model-viewer-wrapper">
-                      <h2>Animation</h2>
-                      <div class="modelsglb">
-                        <video id="video-player-1" controls class="video-player">
+                    </article>
+                    <article class="project-card" data-category="3d-modeling">
+                      <div class="project-media">
+                        <model-viewer src="./client/public/models/katananotexturing.glb" alt="Katana wireframe 3D model"
+                          camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                      </div>
+                      <div class="project-info">
+                        <h3 class="project-title">Katana - Wireframe/Lowpoly</h3>
+                        <p class="project-description">
+                          Versión lowpoly optimizada para juegos móviles con menos de 5000 polígonos.
+                        </p>
+                        <div class="project-role">
+                          <span class="label">Mi rol:</span>
+                          <span>Modelado 3D, Retopología, Optimización</span>
+                        </div>
+                        <div class="project-tools">
+                          <span class="tool-tag">Blender</span>
+                          <span class="tool-tag">Maya</span>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="project-card" data-category="animation-3d">
+                      <div class="project-media">
+                        <video controls class="project-video">
                           <source src="./client/public/vids/Video-Patada.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
                         </video>
                       </div>
-                    </div>
-                    <div class="model-nav">
-                      <button id="prev-model-anim" class="model-nav-button">
-                        &lt;
-                      </button>
-                      <span id="model-set-number-anim">1</span>
-                      <button id="next-model-anim" class="model-nav-button">
-                        &gt;
-                      </button>
-                    </div>
-                    <div class="model-viewer-wrapper">
-                      <h2>Modeling</h2>
-                      <div class="modelsglb">
-                        <video id="video-player-2" controls class="video-player">
+                      <div class="project-info">
+                        <h3 class="project-title">Animación de Combate - Patada</h3>
+                        <p class="project-description">
+                          Ciclo de animación de patada para personaje de acción en videojuego de lucha.
+                        </p>
+                        <div class="project-role">
+                          <span class="label">Mi rol:</span>
+                          <span>Rigging, Animación, Timing</span>
+                        </div>
+                        <div class="project-tools">
+                          <span class="tool-tag">Blender</span>
+                          <span class="tool-tag">Mixamo</span>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="project-card" data-category="animation-3d">
+                      <div class="project-media">
+                        <video controls class="project-video">
                           <source src="./client/public/vids/Video-Death.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
                         </video>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="translatable"></div>
-                <div class="tools">
-                  <button class="project-button">Photoshop</button>
-                  <button class="project-button">Premiere</button>
-                </div>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Saepe earum facere necessitatibus quas, asperiores alias
-                  repudiandae? Laborum rerum, harum quis possimus facilis,
-                  voluptatem temporibus dolore illo aliquid architecto
-                  distinctio dicta!. Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Saepe earum facere necessitatibus quas,
-                  asperiores alias repudiandae? Laborum rerum, harum quis
-                  possimus facilis, voluptatem temporibus dolore illo aliquid
-                  architecto distinctio dicta!.
-                </p>
-                <section id="contact" class="contact-section">
-                  <div class="contact-container">
-                    <h2 class="text-blue section-title">Contacto</h2>
-
-                    <div class="contact-content">
-
-                      <div class="contact-form-wrapper">
-                        <h3 class="text-pink">Envíame un mensaje</h3>
-                        <form class="contact-form" id="contact-form">
-                          <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                          </div>
-                          <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <input type="text" id="subject" name="subject" required
-                              placeholder="¿De qué quieres hablar?">
-                          </div>
-                          <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required
-                              placeholder="Tu mensaje..."></textarea>
-                          </div>
-                          <button type="submit" class="submit-button">Enviar mensaje</button>
-                        </form>
+                      <div class="project-info">
+                        <h3 class="project-title">Animación de Muerte</h3>
+                        <p class="project-description">
+                          Animación de muerte dramática para NPC en juego de rol.
+                        </p>
+                        <div class="project-role">
+                          <span class="label">Mi rol:</span>
+                          <span>Animación, Física de ragdoll</span>
+                        </div>
+                        <div class="project-tools">
+                          <span class="tool-tag">Maya</span>
+                          <span class="tool-tag">Unity</span>
+                        </div>
                       </div>
-
-                      <div class="contact-info-wrapper">
-                        <h3 class="text-orange">Información de contacto</h3>
-
-                        <div class="contact-email">
-                          <span class="contact-label">Email:</span>
-                          <a href="mailto:tu@email.com" class="email-link">tu@email.com</a>
+                    </article>
+                  </div>
+                  <section id="contact" class="contact-section">
+                    <div class="contact-container">
+                      <h2 class="text-blue section-title">Contacto</h2>
+                      <div class="contact-content">
+                        <div class="contact-form-wrapper">
+                          <h3 class="text-pink">Envíame un mensaje</h3>
+                          <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                              <label for="name">Nombre</label>
+                              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                              <label for="subject">Asunto</label>
+                              <input type="text" id="subject" name="subject" required
+                                placeholder="¿De qué quieres hablar?">
+                            </div>
+                            <div class="form-group">
+                              <label for="message">Mensaje</label>
+                              <textarea id="message" name="message" rows="5" required
+                                placeholder="Tu mensaje..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Enviar mensaje</button>
+                          </form>
                         </div>
 
-                        <div class="social-links">
-                          <h4>Redes profesionales</h4>
-                          <div class="social-buttons">
-                            <a href="https://artstation.com/tu-usuario" target="_blank"
-                              class="social-button artstation">
-                              <span class="social-icon">🎨</span>
-                              <span>ArtStation</span>
-                            </a>
-                            <a href="https://behance.net/tu-usuario" target="_blank" class="social-button behance">
-                              <span class="social-icon">🅱️</span>
-                              <span>Behance</span>
-                            </a>
-                            <a href="https://instagram.com/tu-usuario" target="_blank" class="social-button instagram">
-                              <span class="social-icon">📷</span>
-                              <span>Instagram</span>
-                            </a>
-                            <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="social-button linkedin">
-                              <span class="social-icon">💼</span>
-                              <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/tu-usuario" target="_blank" class="social-button github">
-                              <span class="social-icon">💻</span>
-                              <span>GitHub</span>
+                        <div class="contact-info-wrapper">
+                          <h3 class="text-orange">Información de contacto</h3>
+
+                          <div class="contact-email">
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:tu@email.com" class="email-link">tu@email.com</a>
+                          </div>
+
+                          <div class="social-links">
+                            <h4>Redes profesionales</h4>
+                            <div class="social-buttons">
+                              <a href="https://artstation.com/tu-usuario" target="_blank"
+                                class="social-button artstation">
+                                <span class="social-icon">🎨</span>
+                                <span>ArtStation</span>
+                              </a>
+                              <a href="https://behance.net/tu-usuario" target="_blank" class="social-button behance">
+                                <span class="social-icon">🅱️</span>
+                                <span>Behance</span>
+                              </a>
+                              <a href="https://instagram.com/tu-usuario" target="_blank"
+                                class="social-button instagram">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram</span>
+                              </a>
+                              <a href="https://linkedin.com/in/tu-usuario" target="_blank"
+                                class="social-button linkedin">
+                                <span class="social-icon">💼</span>
+                                <span>LinkedIn</span>
+                              </a>
+                              <a href="https://github.com/tu-usuario" target="_blank" class="social-button github">
+                                <span class="social-icon">💻</span>
+                                <span>GitHub</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="cv-download">
+                            <a href="./client/public/docs/cv.pdf" download class="cv-button">
+                              <span>📄</span>
+                              <span>Descargar CV (PDF)</span>
                             </a>
                           </div>
-                        </div>
-
-                        <div class="cv-download">
-                          <a href="./client/public/docs/cv.pdf" download class="cv-button">
-                            <span>📄</span>
-                            <span>Descargar CV (PDF)</span>
-                          </a>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </section>
+                  </section>
               </div>
             </div>
           </div>
