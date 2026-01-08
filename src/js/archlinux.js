@@ -31,15 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const modelSets = [
     {
       left: "./client/public/models/katana.glb",
-      right: "./client/public/models/katananotexturing.glb",
+      right: "./client/public/models/noTextura/katananotexturing.glb",
     },
     {
       left: "./client/public/models/Gunlance_Textura.glb",
-      right: "./client/public/models/Gunlance_NoTextura.glb",
+      right: "./client/public/models/noTextura/Gunlance_NoTextura.glb",
     },
     {
       left: "./client/public/models/Gsword_Textura.glb",
-      right: "./client/public/models/Gsword_NoTextura.glb",
+      right: "./client/public/models/noTextura/Gsword_NoTextura.glb",
     },
   ];
 

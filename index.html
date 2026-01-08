@@ -138,19 +138,16 @@
                 <div class="works-tabs">
                   <button class="tab-button active" data-tab="all">Todos</button>
                   <button class="tab-button" data-tab="3d-modeling">Modelado 3D</button>
+                  <button class="tab-button" data-tab="texturing">Texturizado</button>
+                  <button class="tab-button" data-tab="rigging">Rigueo</button>
                   <button class="tab-button" data-tab="animation-3d">Animación 3D</button>
-                  <button class="tab-button" data-tab="animation-2d">Animación 2D</button>
-                  <button class="tab-button" data-tab="games-3d">Juegos 3D</button>
-                  <button class="tab-button" data-tab="games-2d">Juegos 2D</button>
-                  <button class="tab-button" data-tab="video">Vídeo</button>
-                  <button class="tab-button" data-tab="photography">Fotografía</button>
-                  <button class="tab-button" data-tab="3d-print">Impresión 3D</button>
                 </div>
 
                 <div class="projects-gallery">
-                  <article class="project-card" data-category="3d-modeling">
+                  <!-- Katana -->
+                  <article class="project-card" data-category="texturing">
                     <div class="project-media">
-                      <model-viewer src="./client/public/models/katana.glb" alt="Katana 3D model"
+                      <model-viewer src="./client/public/models/siTextura/katana.glb" alt="Katana 3D model"
                         camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
                     </div>
                     <div class="project-info">
@@ -160,7 +157,7 @@
                       </p>
                       <div class="project-role">
                         <span class="label">Mi rol:</span>
-                        <span>Modelado 3D, UV Mapping, Texturizado PBR</span>
+                        <span>Texturizado PBR</span>
                       </div>
                       <div class="project-tools">
                         <span class="tool-tag">Blender</span>
@@ -170,8 +167,9 @@
                   </article>
                   <article class="project-card" data-category="3d-modeling">
                     <div class="project-media">
-                      <model-viewer src="./client/public/models/katananotexturing.glb" alt="Katana wireframe 3D model"
-                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                      <model-viewer src="./client/public/models/noTextura/katananotexturing.glb"
+                        alt="Katana wireframe 3D model" camera-orbit="0deg 75deg 2m" camera-controls
+                        auto-rotate></model-viewer>
                     </div>
                     <div class="project-info">
                       <h3 class="project-title">Katana - Wireframe/Lowpoly</h3>
@@ -188,6 +186,235 @@
                       </div>
                     </div>
                   </article>
+
+                  <!-- Great Sword -->
+                  <article class="project-card" data-category="texturing">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/siTextura/Gsword_Textura.glb" alt="Great Sword 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Great Sword - Texturizado</h3>
+                      <p class="project-description">
+                        Espadón pesado con texturas PBR detalladas y desgaste de batalla.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Texturizado, Shading</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Substance Painter</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Gsword_NoTextura.glb"
+                        alt="Great Sword Wireframe" camera-orbit="0deg 75deg 2m" camera-controls
+                        auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Great Sword - Modelo</h3>
+                      <p class="project-description">
+                        Modelo 3D de espadón enfocado en la silueta y topología limpia.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Gunlance -->
+                  <article class="project-card" data-category="texturing">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/siTextura/Gunlance_Textura.glb" alt="Gunlance 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Gunlance - Texturizado</h3>
+                      <p class="project-description">
+                        Lanza pistola con texturas realistas de metal y madera.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Texturizado</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Substance Painter</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Gunlance_NoTextura.glb"
+                        alt="Gunlance Wireframe" camera-orbit="0deg 75deg 2m" camera-controls
+                        auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Gunlance - Modelo</h3>
+                      <p class="project-description">
+                        Modelo base de la lanza pistola listo para texturizar.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Alabarda -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Alabarda_model.glb" alt="Alabarda 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Alabarda - Modelo</h3>
+                      <p class="project-description">
+                        Modelo 3D de alabarda medieval con topología optimizada.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Armor -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Armor_model.glb" alt="Armor 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Armadura - Modelo</h3>
+                      <p class="project-description">
+                        Armadura completa modelada con atención al detalle anatómico.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Bsword -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Bsword.glb" alt="Broadsword 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Espada Ancha - Modelo</h3>
+                      <p class="project-description">
+                        Espada ancha con diseño clásico para juegos de fantasía.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Cuadro -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Cuadro.glb" alt="Cuadro 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Cuadro - Modelo</h3>
+                      <p class="project-description">
+                        Modelo 3D de cuadro decorativo para escenas de interiores.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Model Axe -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Model_axe.glb" alt="Axe 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Hacha - Modelo</h3>
+                      <p class="project-description">
+                        Hacha de combate con geometría limpia y eficiente.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Saxe -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Saxe.glb" alt="Saxe 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Saxe - Modelo</h3>
+                      <p class="project-description">
+                        Cuchillo saxón tradicional modelado para juegos históricos.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Gunlance (sin textura alternativo) -->
+                  <article class="project-card" data-category="3d-modeling">
+                    <div class="project-media">
+                      <model-viewer src="./client/public/models/noTextura/Gunlance.glb" alt="Gunlance variant 3D model"
+                        camera-orbit="0deg 75deg 2m" camera-controls auto-rotate></model-viewer>
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title">Gunlance Variante - Modelo</h3>
+                      <p class="project-description">
+                        Variante alternativa de la lanza pistola con diferente silueta.
+                      </p>
+                      <div class="project-role">
+                        <span class="label">Mi rol:</span>
+                        <span>Modelado 3D</span>
+                      </div>
+                      <div class="project-tools">
+                        <span class="tool-tag">Blender</span>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Animations -->
                   <article class="project-card" data-category="animation-3d">
                     <div class="project-media">
                       <video controls class="project-video">
