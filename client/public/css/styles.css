@@ -732,7 +732,9 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 0.8rem 2rem;
   border: 1px solid #c9d1d9;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #0d1117;
   z-index: 100;
   margin: 0 0 0.4rem 0;
 }
