@@ -1286,9 +1286,6 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
   }
 }
 
-/* ========================================
-   HERO SECTION - LAYOUT D (AVATAR RIGHT)
-   ======================================== */
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -1316,10 +1313,9 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
 .avatar-image {
   width: 100%;
   max-width: 250px;
-  height: auto;
+  height: 255px;
   border-radius: 50%;
   border: 2px solid #58a6ff;
-  box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
 }
 
 /* Responsive para Layout D */
