@@ -10,7 +10,7 @@ const projectsData = [
   {
     category: "texturing",
     type: "model",
-    src: "./client/public/models/siTextura/katana.glb",
+    src: "./client/public/models/siTextura/katana_Textura.glb",
     alt: "Katana 3D model",
     title: "Katana - Prop para RPG",
     description:
@@ -22,7 +22,7 @@ const projectsData = [
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/katananotexturing.glb",
+    src: "./client/public/models/noTextura/Katana_noTextura.glb",
     alt: "Katana wireframe 3D model",
     title: "Katana - Wireframe/Lowpoly",
     description:
@@ -30,35 +30,11 @@ const projectsData = [
     role: "Modelado 3D, Retopología, Optimización",
     tools: ["Blender", "Maya"],
   },
-  // Great Sword - Texturizado
-  {
-    category: "texturing",
-    type: "model",
-    src: "./client/public/models/siTextura/Gsword_Textura.glb",
-    alt: "Great Sword 3D model",
-    title: "Great Sword - Texturizado",
-    description:
-      "Espadón pesado con texturas PBR detalladas y desgaste de batalla.",
-    role: "Texturizado, Shading",
-    tools: ["Substance Painter"],
-  },
-  // Great Sword - Modelo
-  {
-    category: "3d-modeling",
-    type: "model",
-    src: "./client/public/models/noTextura/Gsword_NoTextura.glb",
-    alt: "Great Sword Wireframe",
-    title: "Great Sword - Modelo",
-    description:
-      "Modelo 3D de espadón enfocado en la silueta y topología limpia.",
-    role: "Modelado 3D",
-    tools: ["Blender"],
-  },
   // Gunlance - Texturizado
   {
     category: "texturing",
     type: "model",
-    src: "./client/public/models/siTextura/Gunlance1.glb",
+    src: "./client/public/models/siTextura/Gunlance_Textura.glb",
     alt: "Gunlance 3D model",
     title: "Gunlance - Texturizado",
     description: "Lanza pistola con texturas realistas de metal y madera.",
@@ -69,29 +45,41 @@ const projectsData = [
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Gunlance_NoTextura.glb",
+    src: "./client/public/models/noTextura/Gunlance_noTextura.glb",
     alt: "Gunlance Wireframe",
     title: "Gunlance - Modelo",
     description: "Modelo base de la lanza pistola listo para texturizar.",
     role: "Modelado 3D",
     tools: ["Blender"],
   },
+  // Alabarda Texturizada
+  {
+    category: "texturing",
+    type: "model",
+    src: "./client/public/models/siTextura/Alabarda_Textura.glb",
+    alt: "Alabarda 3D model",
+    title: "Alabarda - Texturizado",
+    description: "Alabarda medieval con texturas realistas de metal y madera.",
+    role: "Texturizado",
+    tools: ["Substance Painter"],
+  },
   // Alabarda
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Alabarda_model.glb",
+    src: "./client/public/models/noTextura/Alabarda_noTextura.glb",
     alt: "Alabarda 3D model",
     title: "Alabarda - Modelo",
     description: "Modelo 3D de alabarda medieval con topología optimizada.",
     role: "Modelado 3D",
     tools: ["Blender"],
   },
+
   // Armor
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Armor_model.glb",
+    src: "./client/public/models/noTextura/Armor_noTextura.glb",
     alt: "Armor 3D model",
     title: "Armadura - Modelo",
     description:
@@ -99,22 +87,35 @@ const projectsData = [
     role: "Modelado 3D",
     tools: ["Blender"],
   },
+
+  // Bsword Texturizado
+  {
+    category: "texturing",
+    type: "model",
+    src: "./client/public/models/siTextura/Bsword_Textura.glb",
+    alt: "Broadsword 3D model",
+    title: "Espada Ancha - Texturizado",
+    description: "Espada ancha con diseño clásico para juegos de fantasía.",
+    role: "Texturizado",
+    tools: ["Substance Painter"],
+  },
   // Bsword
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Bsword.glb",
+    src: "./client/public/models/noTextura/Bsword_noTextura.glb",
     alt: "Broadsword 3D model",
     title: "Espada Ancha - Modelo",
     description: "Espada ancha con diseño clásico para juegos de fantasía.",
     role: "Modelado 3D",
     tools: ["Blender"],
   },
+
   // Cuadro
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Cuadro.glb",
+    src: "./client/public/models/noTextura/Cuadro_noTextura.glb",
     alt: "Cuadro 3D model",
     title: "Cuadro - Modelo",
     description: "Modelo 3D de cuadro decorativo para escenas de interiores.",
@@ -125,33 +126,10 @@ const projectsData = [
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/Model_axe.glb",
+    src: "./client/public/models/noTextura/Axe_noTextura.glb",
     alt: "Axe 3D model",
     title: "Hacha - Modelo",
     description: "Hacha de combate con geometría limpia y eficiente.",
-    role: "Modelado 3D",
-    tools: ["Blender"],
-  },
-  // Saxe
-  {
-    category: "3d-modeling",
-    type: "model",
-    src: "./client/public/models/noTextura/Saxe.glb",
-    alt: "Saxe 3D model",
-    title: "Saxe - Modelo",
-    description: "Cuchillo saxón tradicional modelado para juegos históricos.",
-    role: "Modelado 3D",
-    tools: ["Blender"],
-  },
-  // Gunlance Variante
-  {
-    category: "3d-modeling",
-    type: "model",
-    src: "./client/public/models/noTextura/Gunlance.glb",
-    alt: "Gunlance variant 3D model",
-    title: "Gunlance Variante - Modelo",
-    description:
-      "Variante alternativa de la lanza pistola con diferente silueta.",
     role: "Modelado 3D",
     tools: ["Blender"],
   },
