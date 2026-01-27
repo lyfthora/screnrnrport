@@ -886,10 +886,12 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
 }
 
 .contact-section {
-  border: 0.1px solid #c9d1d9;
   padding: 2rem;
   margin: 1rem;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title {
@@ -900,14 +902,20 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-container {
+  width: 100%;
 }
 
 .contact-form-wrapper {
-  border: 0.1px solid #58a6ff;
-  padding: 1.5rem;
+  border: 1px solid white;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .contact-form-wrapper h3 {
