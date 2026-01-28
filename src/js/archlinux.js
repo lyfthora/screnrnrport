@@ -10,7 +10,7 @@ const projectsData = [
   {
     category: "texturing",
     type: "model",
-    src: "./client/public/models/siTextura/katana_Textura.glb",
+    src: "./client/public/models/siTextura/Katana_Textura.glb",
     alt: "Katana 3D model",
     title: "Katana - Prop para RPG",
     description:

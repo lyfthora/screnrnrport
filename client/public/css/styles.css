@@ -699,8 +699,22 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
 .carousel-item img {
   margin: 0 auto;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.5);
+  z-index: 0;
 }
 
 .carousel-control-prev,
