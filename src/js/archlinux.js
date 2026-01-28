@@ -83,8 +83,8 @@ const projectsData = [
     title: "Armadura - Texturizado",
     description:
       "Armadura completa modelada con atención al detalle anatómico.",
-    role: "Modelado 3D",
-    tools: ["Blender"],
+    role: "Texturizado",
+    tools: ["Substance Painter"],
   },
   // Armor
   {
