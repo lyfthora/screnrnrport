@@ -74,7 +74,18 @@ const projectsData = [
     role: "Modelado 3D",
     tools: ["Blender"],
   },
-
+  // Armor Texturizado
+  {
+    category: "texturing",
+    type: "model",
+    src: "./client/public/models/siTextura/Armor_Textura.glb",
+    alt: "Armor 3D model",
+    title: "Armadura - Texturizado",
+    description:
+      "Armadura completa modelada con atención al detalle anatómico.",
+    role: "Modelado 3D",
+    tools: ["Blender"],
+  },
   // Armor
   {
     category: "3d-modeling",
@@ -133,26 +144,77 @@ const projectsData = [
     role: "Modelado 3D",
     tools: ["Blender"],
   },
-  // Animation - Patada
+  // Video Patada cámara 1
   {
     category: "animation-3d",
-    type: "video",
-    src: "./client/public/vids/Video-Patada.mp4",
-    title: "Animación de Combate - Patada",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/pIFpKxifJ4w" title="Video Patada cámara 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Patada cámara 1",
     description:
-      "Ciclo de animación de patada para personaje de acción en videojuego de lucha.",
+      "Ciclo de animación de patada para personaje de acción en videojuego de lucha (Cámara 1).",
     role: "Rigging, Animación, Timing",
     tools: ["Blender", "Mixamo"],
   },
-  // Animation - Death
+  // Video Patada lateral
   {
     category: "animation-3d",
-    type: "video",
-    src: "./client/public/vids/Video-Death.mp4",
-    title: "Animación de Muerte",
-    description: "Animación de muerte dramática para NPC en juego de rol.",
-    role: "Animación, Física de ragdoll",
-    tools: ["Maya", "Unity"],
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/LQdtgHhqZng" title="Video Patada lateral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Patada lateral",
+    description:
+      "Ciclo de animación de patada para personaje de acción en videojuego de lucha (Vista Lateral).",
+    role: "Rigging, Animación, Timing",
+    tools: ["Blender", "Mixamo"],
+  },
+  // Video idle
+  {
+    category: "animation-3d",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/eEsh293wgsc" title="Video idle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video idle",
+    description: "Animación de estado de reposo (Idle) para personaje.",
+    role: "Rigging, Animación",
+    tools: ["Blender", "Mixamo"],
+  },
+  // Video Jump
+  {
+    category: "animation-3d",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/zJhmSwMnXkI" title="Video Jump" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Jump",
+    description: "Animación de salto para personaje de videojuego.",
+    role: "Rigging, Animación",
+    tools: ["Blender", "Mixamo"],
+  },
+  // Video Jump 2 lateral
+  {
+    category: "animation-3d",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/C96a7OkfXjI" title="Video Jump 2 lateral" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Jump 2 lateral",
+    description: "Animación de salto (Vista Lateral).",
+    role: "Rigging, Animación",
+    tools: ["Blender", "Mixamo"],
+  },
+  // Video Death
+  {
+    category: "animation-3d",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/wHbr3LvaIpA" title="Video Death" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Death",
+    description: "Animación de muerte del personaje.",
+    role: "Rigging, Animación",
+    tools: ["Blender", "Mixamo"],
+  },
+  // Video Walk
+  {
+    category: "animation-3d",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PIfy2R8K5no" title="Video Walk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Video Walk",
+    description: "Ciclo de caminata (Walk Cycle).",
+    role: "Rigging, Animación",
+    tools: ["Blender", "Mixamo"],
   },
 ];
 
@@ -162,10 +224,14 @@ function renderProjects() {
 
   container.innerHTML = projectsData
     .map((project) => {
-      const mediaHtml =
-        project.type === "model"
-          ? `<model-viewer src="${project.src}" alt="${project.alt}" camera-controls auto-rotate loading="lazy"></model-viewer>`
-          : `<video controls class="project-video"><source src="${project.src}" type="video/mp4" /></video>`;
+      let mediaHtml = "";
+      if (project.type === "model") {
+        mediaHtml = `<model-viewer src="${project.src}" alt="${project.alt}" camera-controls auto-rotate loading="lazy"></model-viewer>`;
+      } else if (project.type === "video") {
+        mediaHtml = `<video controls class="project-video"><source src="${project.src}" type="video/mp4" /></video>`;
+      } else if (project.type === "youtube") {
+        mediaHtml = `<div class="ratio ratio-16x9">${project.iframe}</div>`;
+      }
 
       const toolsHtml = project.tools
         .map((tool) => `<span class="tool-tag">${tool}</span>`)
