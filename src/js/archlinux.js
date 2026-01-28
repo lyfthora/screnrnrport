@@ -34,7 +34,7 @@ const projectsData = [
   {
     category: "texturing",
     type: "model",
-    src: "./client/public/models/siTextura/gunlance_textura.glb",
+    src: "./client/public/models/siTextura/Gunlance_Textura.glb",
     alt: "Gunlance 3D model",
     title: "Gunlance - Texturizado",
     description: "Lanza pistola con texturas realistas de metal y madera.",
@@ -45,7 +45,7 @@ const projectsData = [
   {
     category: "3d-modeling",
     type: "model",
-    src: "./client/public/models/noTextura/gunlance_notextura.glb",
+    src: "./client/public/models/noTextura/Gunlance_NoTextura.glb",
     alt: "Gunlance Wireframe",
     title: "Gunlance - Modelo",
     description: "Modelo base de la lanza pistola listo para texturizar.",
