@@ -300,7 +300,6 @@ function initPageTransitions() {
   });
 }
 function initModelClickLoading() {
-  // Crear el observer una sola vez
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -325,7 +324,6 @@ function initModelClickLoading() {
     modelViewer.setAttribute("camera-controls", "");
     modelViewer.setAttribute("auto-rotate", "");
     modelViewer.setAttribute("camera-orbit", "0deg 75deg 105%");
-    // Reemplazar y observar
     placeholder.replaceWith(modelViewer);
     observer.observe(modelViewer);
   });
