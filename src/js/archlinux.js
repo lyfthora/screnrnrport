@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPageTransitions();
   initProjectTabs();
   initModelClickLoading();
+  initYouTubeClickToPlay();
 });
 
 const projectsData = [
@@ -228,8 +229,48 @@ const projectsData = [
     role: "Rigging, Animación",
     tools: ["Blender", "Mixamo"],
   },
+  // rigeo armadura cartoon
+  {
+    category: "rigging",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XGrmCcLsAbg" title="Rigging Armadura Cartoon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Rigging Armadura Cartoon",
+    description: "Rigging de armadura cartoon.",
+    role: "Rigging",
+    tools: ["Blender"],
+  },
+  // rigeo araña
+  {
+    category: "rigging",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rFQsUkVWmrs" title="Rigging Araña" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Rigging Araña",
+    description: "Rigging de araña.",
+    role: "Rigging",
+    tools: ["Blender"],
+  },
+  // rigeo personaje
+  {
+    category: "rigging",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/iUyqg-9YUBY" title="Rigging Personaje" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Rigging Personaje",
+    description: "Rigging de personaje.",
+    role: "Rigging",
+    tools: ["Blender"],
+  },
+  // rigeo nergigante
+  {
+    category: "rigging",
+    type: "youtube",
+    iframe: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HrgxsE9tq2g" title="Rigging Nergigante" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    title: "Rigging Nergigante",
+    description: "Rigging de Nergigante.",
+    role: "Rigging",
+    tools: ["Blender"],
+  },
 ];
-
+let ytIndex = 0;
 function renderProjects() {
   const container = document.querySelector(".projects-gallery");
   if (!container) return;
@@ -252,9 +293,15 @@ function renderProjects() {
       } else if (project.type === "video") {
         mediaHtml = `<video controls class="project-video"><source src="${project.src}" type="video/mp4" /></video>`;
       } else if (project.type === "youtube") {
-        mediaHtml = `<div class="ratio ratio-16x9">${project.iframe}</div>`;
+        const videoIdMatch = project.iframe.match(/embed\/([a-zA-Z0-9_-]+)/);
+        const videoId = videoIdMatch ? videoIdMatch[1] : "";
+        const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+        mediaHtml = `
+      <div class="yt-thumbnail" data-iframe='${project.iframe.replace(/'/g, "&#39;")}'>
+        <img src="${thumbnailUrl}" alt="${project.title}" class="yt-thumbnail-img" />
+        <div class="yt-play-btn">▶</div>
+      </div>`;
       }
-
       const toolsHtml = project.tools
         .map((tool) => `<span class="tool-tag">${tool}</span>`)
         .join("");
@@ -348,3 +395,43 @@ function initProjectTabs() {
     });
   });
 }
+function initYouTubeClickToPlay() {
+  document.addEventListener("click", (e) => {
+    const thumbnail = e.target.closest(".yt-thumbnail");
+    if (thumbnail) {
+      const card = thumbnail.closest(".project-card");
+      const iframeHtml = thumbnail.dataset.iframe;
+      const mediaContainer = thumbnail.closest(".project-media");
+      mediaContainer.innerHTML = `
+        <div class="yt-player-wrapper">
+          <div class="ratio ratio-16x9">${iframeHtml}</div>
+          <button class="yt-close-btn" title="Cerrar video">✕</button>
+        </div>`;
+      card.classList.add("video-expanded");
+      return;
+    }
+    const closeBtn = e.target.closest(".yt-close-btn");
+    if (closeBtn) {
+      const card = closeBtn.closest(".project-card");
+      const mediaContainer = closeBtn.closest(".project-media");
+      const iframe = mediaContainer.querySelector("iframe");
+      const src = iframe ? iframe.getAttribute("src") : "";
+      const videoIdMatch = src.match(/embed\/([a-zA-Z0-9_-]+)/);
+      const videoId = videoIdMatch ? videoIdMatch[1] : "";
+      const title = card.querySelector(".project-title")?.textContent || "";
+      const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+      mediaContainer.innerHTML = `
+        <div class="yt-thumbnail" data-iframe='${iframe.outerHTML.replace(/'/g, "&#39;")}'>
+          <img src="${thumbnailUrl}" alt="${title}" class="yt-thumbnail-img" />
+          <div class="yt-play-btn">▶</div>
+        </div>`;
+      card.classList.remove("video-expanded");
+    }
+  });
+}
+
+window.onYouTubeIframeAPIReady = function () {
+  if (projectsRendered) {
+    initYouTubePlayers();
+  }
+};
