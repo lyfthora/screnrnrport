@@ -270,7 +270,7 @@ const projectsData = [
     tools: ["Blender"],
   },
 ];
-let ytIndex = 0;
+
 function renderProjects() {
   const container = document.querySelector(".projects-gallery");
   if (!container) return;
@@ -399,39 +399,20 @@ function initYouTubeClickToPlay() {
   document.addEventListener("click", (e) => {
     const thumbnail = e.target.closest(".yt-thumbnail");
     if (thumbnail) {
-      const card = thumbnail.closest(".project-card");
-      const iframeHtml = thumbnail.dataset.iframe;
-      const mediaContainer = thumbnail.closest(".project-media");
-      mediaContainer.innerHTML = `
-        <div class="yt-player-wrapper">
-          <div class="ratio ratio-16x9">${iframeHtml}</div>
-          <button class="yt-close-btn" title="Cerrar video">✕</button>
-        </div>`;
-      card.classList.add("video-expanded");
+      const media = thumbnail.closest(".project-media");
+      media.dataset.original = media.innerHTML;
+      media.innerHTML = `<div class="yt-player-wrapper">
+        <div class="ratio ratio-16x9">${thumbnail.dataset.iframe}</div>
+        <button class="yt-close-btn">✕</button>
+      </div>`;
+      media.closest(".project-card").classList.add("video-expanded");
       return;
     }
     const closeBtn = e.target.closest(".yt-close-btn");
     if (closeBtn) {
-      const card = closeBtn.closest(".project-card");
-      const mediaContainer = closeBtn.closest(".project-media");
-      const iframe = mediaContainer.querySelector("iframe");
-      const src = iframe ? iframe.getAttribute("src") : "";
-      const videoIdMatch = src.match(/embed\/([a-zA-Z0-9_-]+)/);
-      const videoId = videoIdMatch ? videoIdMatch[1] : "";
-      const title = card.querySelector(".project-title")?.textContent || "";
-      const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-      mediaContainer.innerHTML = `
-        <div class="yt-thumbnail" data-iframe='${iframe.outerHTML.replace(/'/g, "&#39;")}'>
-          <img src="${thumbnailUrl}" alt="${title}" class="yt-thumbnail-img" />
-          <div class="yt-play-btn">▶</div>
-        </div>`;
-      card.classList.remove("video-expanded");
+      const media = closeBtn.closest(".project-media");
+      media.innerHTML = media.dataset.original;
+      media.closest(".project-card").classList.remove("video-expanded");
     }
   });
 }
-
-window.onYouTubeIframeAPIReady = function () {
-  if (projectsRendered) {
-    initYouTubePlayers();
-  }
-};
